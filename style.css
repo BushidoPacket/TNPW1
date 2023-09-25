@@ -1,4 +1,4 @@
-@font-face {
+/*@font-face {
     font-family: 'Skranji';
     src: url('fonts/Skranji-Regular.ttf') format('ttf'); 
     font-weight: normal;
@@ -8,7 +8,10 @@
     font-family: 'Skranji';
     src: url('fonts/Skranji-Bold.ttf') format('ttf'); 
     font-weight: bold;
-}
+}*/
+
+/*@import url('https://fonts.cdnfonts.com/css/skranji');*/
+@import url('https://fonts.cdnfonts.com/css/palatino-lt-black');
 
 :root {
     --last-update: "24.9.2023";
@@ -20,7 +23,8 @@ html {
 }
 
 body {
-    font-family: "Skranji";
+    font-family: "Palatino LT";
+    font-weight: normal;
 
     background-image: url("pictures/background_main.jpg");
     /*background-color: rgb(0,0,0,0.2);
@@ -101,9 +105,9 @@ nav > a > img {
 
 main {
     background-color: black;
-    width: 1100px;
+    width: 62%;
     height: auto;
-    margin-left: 100px;
+    margin-left: 80px;
     border-radius: 10px;
     border: 4px dashed rgba(255, 255, 255, 0.205);
     margin-bottom: 50px;
@@ -332,6 +336,8 @@ footer {
     color: white;
     text-shadow: 5px 5px 20px black;
     background-color: rgb(0,0,0,0.8);
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .date::before {
@@ -348,9 +354,7 @@ footer {
         overflow-x: hidden;
     }
 
-    body {
-        font-family: "Skranji";
-        
+    body {        
         background-image: none;
         background-color: rgb(7, 54, 82);
         display: flex;
