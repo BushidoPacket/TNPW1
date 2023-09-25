@@ -328,6 +328,17 @@ tr:nth-child(2n) {
     color: var(--white);
 }
 
+.dialogError {
+    display: block;
+    justify-self: center;
+    text-align: center;
+    margin: auto;
+    margin-top: 1%;
+    font-size: 15px;
+    color: rgb(245, 72, 72);
+    /*border: 1px dashed red;*/
+}
+
 .map {
     display: block;
     justify-self: center;
