@@ -17,7 +17,7 @@ function buttonMessage(identifier) {
     let element;
     if(identifier == 1){
         element = document.getElementById("dialogDonate");
-        element.style.color = "rgb(245, 72, 72)";
+        element.style.color = "rgb(245, 72, 72)"; /*red*/
         element.innerHTML = "A redirect error occurred. Please try again later.";
     }else{
         element = document.getElementById("dialogContact");
@@ -25,10 +25,10 @@ function buttonMessage(identifier) {
         || document.getElementById("contactEmail").value == "" 
         || document.getElementById("contactSubject").value == "" 
         || document.getElementById("contactText").value == ""){
-            element.style.color = "rgb(245, 72, 72)";
+            element.style.color = "rgb(245, 72, 72)"; /*red*/
             element.innerHTML = "Form not submitted. Please fill out all fields.";
         }else{
-        element.style.color = "rgb(95, 250, 95)";
+        element.style.color = "rgb(95, 250, 95)"; /*green*/
         element.innerHTML = "Form submitted successfully. Thank you for contacting us!";
 
         document.getElementById("contactName").value = "";
