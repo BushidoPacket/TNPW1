@@ -445,7 +445,6 @@ footer {
         text-align: center;
         color: var(--white);
         text-shadow: 10px 10px 10px var(--black);
-        text-wrap: break-word;
         font-size: 30px;
     }
 
