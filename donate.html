@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Skranji" type="text/css">
+    <title>Otter Guard</title>
+
+    <script>
+        window.onload = convert;
+      
+        function convert() {
+          fetch("donators.json")
+            .then((response) => response.json())
+            .then((jsonData) => {
+              let divOutput = document.getElementById("topDonatorsTable");
+              let table = document.createElement("table");
+              let headerNames = Object.keys(jsonData[0]);
+              let thead = document.createElement("thead");
+              let tr = document.createElement("tr");
+              headerNames.forEach((item) => {
+                let th = document.createElement("th");
+                th.innerText = item;
+                tr.appendChild(th);
+              });
+              thead.appendChild(tr);
+              table.append(tr);
+              jsonData.forEach((item) => {
+                let tr = document.createElement("tr");
+                let values = Object.values(item);
+                values.forEach((elem) => {
+                  let td = document.createElement("td");
+                  td.innerText = elem;
+                  tr.appendChild(td);
+                });
+                table.appendChild(tr);
+              });
+              divOutput.appendChild(table);
+            });
+        }
+      </script>
+
+</head>
+<body>
+
+    <div class="headerDiv">
+        <h1>Otter Guard</h1>
+    </div>
+
+    <div class="mainDiv">
+
+        <nav>
+            <a href="index.html"><img src="icons/home.png">Home&nbsp;</a>
+            <br>
+            <a href="aboutus.html"><img src="icons/about us.png">About us&nbsp;</a>
+            <br>
+            <a href="donate.html" style="color: rgb(132, 202, 243);"><img src="icons/donate.png">Donate&nbsp;</a>
+            <br>
+            <a href="contact.html"><img src="icons/contact us.png">Contact us&nbsp;</a>
+        </nav>
+
+        <main>
+            <h2>Donation page</h2>
+            <br>
+            <div class="donateInfo">
+                <div class="donateBar">
+                    <div></div>
+                </div>
+                <br>
+                <p>Donated: $ 2 150 000 / $ 5 000 000 <span style="color: white; font-weight: normal;">for a new otter center</span></p>
+                <br>
+                <button>Donate money</button>
+            </div>
+            <br><br>
+            <h3>What is the money used for ?</h3>
+            <p>Money is used for multiple purposes:</p>
+            <ul>
+                <li>Our current main goal is to build a brand new otter center for our volunteers and to shelter otter families.</li>
+                <li>One of the long term goals is to take care of otters in small shelters.</li>
+                <li>We don't forget even about their environment. Thus we are installing cameras to look after otters in more dangerous zones.</li>
+                <li>The health of otters is important, which is why we provide them with the necessary health care in our shelters.</li>
+            </ul>
+            <br>
+            <h3>How to donate</h3>
+            <p>Donating is very easy. Just click on the button above and you will be redirected to the payment gateway.</p>
+            <p>You can donate whatever amount above $5 you want. If your donation is above $700, we will contact you to place you among top donators.</p>
+            <br>
+            <h2>Our top donators</h2>
+            <br>
+            <div id="topDonatorsTable"></div>
+            <!--<table>
+                <tr>
+                    <th>Donator</th>
+                    <th>Amount</th>
+                    <th>Comment</th>
+                </tr>
+                <tr>
+                    <td>Name 1</td>
+                    <td>Amount 1</td>
+                    <td>Comment 1</td>
+                </tr>
+            </table>-->
+            <br>
+                
+        </main>
+
+    </div>
+
+    <footer>
+        
+        <p>Last update: <span class="date"></span></p>
+        <p>© 2015 - 2023 Otter Guard. All rights reserved. 
+            <span style="font-weight: bold; font-style: italic; color: red;">(This website has been created as a school project. 
+                All informations are fictional. 
+                <a href="sources.html" class="invisibleLink" style="color: red; text-decoration: underline;">Sources of materials here.</a>)</span>
+        </p>
+        <p>Contact: <a href="mailto:office@otterguard.com" class="invisibleLink contactLabel" style="text-decoration: underline;"></a></p>
+
+    </footer>
+</body>
+</html>
