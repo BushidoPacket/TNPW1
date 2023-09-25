@@ -32,6 +32,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin: 0;
 
 }
 
@@ -229,6 +230,10 @@ tr:nth-child(2n) {
     background-color: rgba(255, 255, 255, 0.24);
 }
 
+#galleryHover::before {
+    content: "(Hover over a photo to make it bigger.)";
+}
+
 .gallery {
     justify-self: center;
     flex-wrap: wrap;
@@ -248,11 +253,9 @@ tr:nth-child(2n) {
     margin: auto;
     margin-bottom: 20px;
     transition: 0.4s ease;
-    image-rendering: optimizeSpeed;
 }
 
 .gallery > img:hover {
-    image-rendering: optimizeSpeed;
     transform: scale(6.0);
     box-shadow: 0px 0px 1000px 500px rgba(0, 0, 0, 0.753);
     border: 1px solid black;
@@ -328,7 +331,7 @@ footer {
     left: 0;
     color: white;
     text-shadow: 5px 5px 20px black;
-    /*background-color: rgb(0,0,0,0.8);*/
+    background-color: rgb(0,0,0,0.8);
 }
 
 .date::before {
@@ -337,4 +340,161 @@ footer {
 
 .contactLabel::before {
     content: var(--contact-info);
+}
+
+@media screen and (max-width: 767px) {
+
+    html, body {
+        overflow-x: hidden;
+    }
+
+    body {
+        font-family: "Skranji";
+        
+        background-image: none;
+        background-color: rgb(7, 54, 82);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    
+    }
+
+    .headerDiv{
+        height: auto;
+        margin-bottom: 15px;
+    }
+
+    .mainDiv {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        height: auto;
+        justify-self: center;
+        padding-left: 0;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        border-radius: 5px;
+        justify-self: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    nav > a {
+        flex-basis: 40%;
+        margin: 1%;
+    }
+
+    main {
+        background-color: black;
+        width: 90%;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 50px;
+        height: auto;
+        border-radius: 10px;
+        border: 4px dashed rgba(255, 255, 255, 0.205);
+        justify-self: center;
+    }
+
+    main > p {
+        color: white;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    h2 {
+        margin: auto;
+        margin-right: 5%;
+        margin-left: 5%;
+        padding-top: 20px;
+        text-align: center;
+        color: white;
+        text-shadow: 10px 10px 10px black;
+        text-wrap: break-word;
+        font-size: 30px;
+    }
+
+    main > h3 {
+        color: white;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    main > img {
+        display: block;
+        height: auto;
+        width: 90%;
+        border-radius: 5px;
+        margin: 0 auto;
+    }
+
+    .donateInfo {
+        justify-self: center;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    ul, li {
+        margin-left: 0;
+        margin-right: 5%;
+    }
+
+    .gallery {
+        justify-self: center;
+        flex-wrap: wrap;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #galleryHover::before {
+        content: "(Tap on a photo to make it bigger.)";
+    }
+
+    .gallery > img:hover {
+        transform: scale(1.6);
+    }
+    
+    .gallery > img {
+        width: 80%;
+        height: auto;
+        margin: auto;
+        margin-bottom: 4%;
+    }
+
+    .map {
+        display: block;
+        justify-self: center;
+        margin: auto;
+        margin-bottom: 40px;
+        width: 90%;
+        height: 300px;
+        border: none;
+        border-radius: 10px;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        position: relative;
+        width: 100%;
+        height: auto;
+        font-size: 10px;
+        bottom: 0;
+        left: 0;
+        color: white;
+        text-shadow: 5px 5px 20px black;
+        align-items: center;
+    }
+
+    footer > * {
+        flex-basis: 100%;
+    }
+
 }

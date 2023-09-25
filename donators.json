@@ -1,32 +1,32 @@
 [
     {
       "Name": "Bill Gates",
-      "Amount": "$100 000",
+      "Amount": "$100,000",
       "Comment": "I'm proud to support Otter Guard's mission. Otters are vital to our planet's biodiversity."
     },
     {
       "Name": "Elon Musk",
-      "Amount": "$75 000",
+      "Amount": "$75,000",
       "Comment": "Protecting otters is as important as reaching for the stars. Keep up the fantastic work."
     },
     {
       "Name": "Jeff Bezos",
-      "Amount": "$60 000",
+      "Amount": "$60,000",
       "Comment": "Otters deserve a safe haven just as Earth does. Happy to contribute to this cause."
     },
     {
       "Name": "Oprah Winfrey",
-      "Amount": "$85 000",
+      "Amount": "$85,000",
       "Comment": "Otters bring joy to the world. Let's ensure their continued existence."
     },
     {
       "Name": "Tom Hanks",
-      "Amount": "$90 000",
+      "Amount": "$90,000",
       "Comment": "For the love of otters! Your organization is making a real difference."
     },
     {
       "Name": "John Smith",
-      "Amount": "$1000",
+      "Amount": "$1,000",
       "Comment": "Keep up the good work!"
     },
     {
@@ -46,12 +46,12 @@
     },
     {
       "Name": "Lena Anderson",
-      "Amount": "$1200",
+      "Amount": "$1,200",
       "Comment": "For the love of otters! Let's ensure their continued existence together."
     },
     {
       "Name": "David Otterton",
-      "Amount": "$2000",
+      "Amount": "$2,000",
       "Comment": "Otters deserve a safe home. Your organization's work is a testament to our responsibility to protect the wonders of nature."
     },
     {
@@ -61,42 +61,42 @@
     },
     {
       "Name": "Jakub Miller",
-      "Amount": "$1600",
+      "Amount": "$1,600",
       "Comment": "Protecting otters is protecting our environment. Kudos to your team!"
     },
     {
       "Name": "Mia Taylor",
-      "Amount": "$3000",
+      "Amount": "$3,000",
       "Comment": "Keep up the great work! I'm proud to support your cause."
     },
     {
       "Name": "Tomasz White",
-      "Amount": "$2500",
+      "Amount": "$2,500",
       "Comment": "Otter conservation is a noble cause. I'm thrilled to be part of this mission."
     },
     {
       "Name": "Klara Johnson",
-      "Amount": "$1700",
+      "Amount": "$1,700",
       "Comment": "We're all in this together. Your dedication to ensuring their survival is heartening."
     },
     {
       "Name": "Viktor Kovac",
-      "Amount": "$4500",
+      "Amount": "$4,500",
       "Comment": "The world needs more organizations like Otter Guard. Your work in otter conservation is vital."
     },
     {
       "Name": "Sofia Smith",
-      "Amount": "$1100",
+      "Amount": "$1,100",
       "Comment": "Thank you for protecting these wonderful creatures."
     },
     {
       "Name": "Pavel Davis",
-      "Amount": "$1300",
+      "Amount": "$1,300",
       "Comment": "Otters bring joy to our lives. Let's continue to support them."
     },
     {
       "Name": "Nik Johnson",
-      "Amount": "$5000",
+      "Amount": "$5,000",
       "Comment": "Proud to support Otter Guard!"
     },
     {
@@ -106,22 +106,22 @@
     },
     {
       "Name": "Henry Lee",
-      "Amount": "$1250",
+      "Amount": "$1,250",
       "Comment": "I'm proud to contribute to the protection of otters. They bring joy to the world."
     },
     {
       "Name": "Isabella Brown",
-      "Amount": "$1100",
+      "Amount": "$1,100",
       "Comment": "Thank you for your dedication to preserving otters' natural habitat."
     },
     {
       "Name": "Daniel Mitchell",
-      "Amount": "$1400",
+      "Amount": "$1,400",
       "Comment": "Otters are essential for our environment. I'm happy to support your mission."
     },
     {
       "Name": "Ava Harris",
-      "Amount": "$1800",
+      "Amount": "$1,800",
       "Comment": "For the love of otters! Let's ensure their future."
     },
     {
@@ -131,12 +131,12 @@
     },
     {
       "Name": "Sophia Carter",
-      "Amount": "$1350",
+      "Amount": "$1,350",
       "Comment": "I admire your dedication to otter protection. We need more organizations like yours."
     },
     {
       "Name": "Benjamin Hall",
-      "Amount": "$2200",
+      "Amount": "$2,200",
       "Comment": "Otters are unique and precious creatures. Thank you for safeguarding them."
     },
     {
@@ -146,17 +146,17 @@
     },
     {
       "Name": "William Lopez",
-      "Amount": "$1600",
+      "Amount": "$1,600",
       "Comment": "Protecting otters is protecting biodiversity. Keep pushing forward."
     },
     {
       "Name": "Grace Robinson",
-      "Amount": "$1150",
+      "Amount": "$1,150",
       "Comment": "Your work ensures a better future for otters and our planet."
     },
     {
       "Name": "Samuel Baker",
-      "Amount": "$2100",
+      "Amount": "$2,100",
       "Comment": "I wholeheartedly support the mission of Otter Guard. Keep it up!"
     },
     {
@@ -166,12 +166,12 @@
     },
     {
       "Name": "Nathan Green",
-      "Amount": "$1700",
+      "Amount": "$1,700",
       "Comment": "Preserving otters' habitats is a noble cause. I'm proud to contribute."
     },
     {
       "Name": "Chloe Taylor",
-      "Amount": "$1300",
+      "Amount": "$1,300",
       "Comment": "Otters are a treasure. Keep working to protect them."
     }
 ]
