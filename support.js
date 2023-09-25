@@ -13,14 +13,29 @@ function activePage() {
     }
 }
 
-function errorMessage(identifier) {
+function buttonMessage(identifier) {
     let element;
     if(identifier == 1){
         element = document.getElementById("dialogDonate");
+        element.style.color = "rgb(245, 72, 72)";
         element.innerHTML = "A redirect error occurred. Please try again later.";
     }else{
         element = document.getElementById("dialogContact");
-        element.innerHTML = "An error occurred while submitting the form. Please try again later.";
+        if(document.getElementById("contactName").value == "" 
+        || document.getElementById("contactEmail").value == "" 
+        || document.getElementById("contactSubject").value == "" 
+        || document.getElementById("contactText").value == ""){
+            element.style.color = "rgb(245, 72, 72)";
+            element.innerHTML = "Form not submitted. Please fill out all fields.";
+        }else{
+        element.style.color = "rgb(95, 250, 95)";
+        element.innerHTML = "Form submitted successfully. Thank you for contacting us!";
+
+        document.getElementById("contactName").value = "";
+        document.getElementById("contactEmail").value = "";
+        document.getElementById("contactSubject").value = "";
+        document.getElementById("contactText").value = "";
+        }
     }
     setTimeout(() => {
         element.innerHTML = "";
