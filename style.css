@@ -16,6 +16,16 @@
 :root {
     --last-update: "24.9.2023";
     --contact-info: "office@otterguard.com";
+
+    /*colors*/
+    /*b&w combinations also used directly in parents and childs because of different transparent aspects*/
+    --black: rgb(0, 0, 0);
+    --white: rgb(255, 255, 255);
+
+    /*blue*/
+    --light-blue: rgb(61, 150, 201);
+    --darker-blue: rgb(7, 67, 102); /*used in contact form as background*/
+    --light-page-blue: rgb(132, 202, 243); /*used as contrast color for active page in nav*/
 }
 
 html {
@@ -41,7 +51,7 @@ body {
 }
 
 .invisibleLink, .invisibleLink:visited, .invisibleLink:hover, .invisibleLink:active {
-    color: white;
+    color: var(--white);
     text-decoration: none;
 }
 
@@ -52,8 +62,8 @@ body {
 h1 {
     margin: auto;
     text-align: center;
-    color: white;
-    text-shadow: 10px 10px 10px black;
+    color: var(--white);
+    text-shadow: 10px 10px 10px var(--black);
 
     font-size: 60px;
     /*-webkit-text-stroke: 2px black;*/
@@ -82,11 +92,11 @@ nav > a, nav > a:visited, nav > a:hover, nav > a:active {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border: 2px solid white;
+    border: 2px solid var(--white);
     border-radius: 5px;
     padding: 5px;
     font-size: 22px;
-    color: white;
+    color: var(--white);
     background-color: rgb(0,0,0,0.5);
     text-align: center;
     transition: 0.2s;
@@ -103,31 +113,36 @@ nav > a > img {
     filter: invert(100%);
 }
 
+.navActive {
+    color: var(--light-page-blue) !important;
+}
+
 main {
-    background-color: black;
+    background-color: var(--black);
     width: 62%;
     height: auto;
     margin-left: 80px;
     border-radius: 10px;
-    border: 4px dashed rgba(255, 255, 255, 0.205);
+    /*border: 4px dashed rgba(255, 255, 255, 0.205);*/
     margin-bottom: 50px;
     justify-self: center;
+    box-shadow: 0px 0px 50px var(--black), 0px 0px 25px var(--black);
 }
 
 main > h3 {
-    color: white;
+    color: var(--white);
     margin-left: 40px;
     margin-right: 40px;
 }
 
 main > p {
-    color: white;
+    color: var(--white);
     margin-left: 40px;
     margin-right: 40px;
 }
 
 ul, li {
-    color: white;
+    color: var(--white);
     margin-left: 10px;
     margin-right: 40px;
 }
@@ -148,8 +163,8 @@ h2 {
     margin: auto;
     padding-top: 20px;
     text-align: center;
-    color: white;
-    text-shadow: 10px 10px 10px black;
+    color: var(--white);
+    text-shadow: 10px 10px 10px var(--black);
 
     font-size: 30px;
 }
@@ -160,7 +175,7 @@ h2 {
 }
 
 .donateInfo > p {
-    color: rgb(61, 150, 201);
+    color: var(--light-blue);
     text-align: center;
     margin: auto;
     font-weight: bold;
@@ -168,21 +183,21 @@ h2 {
 
 .donateInfo > button {
     display: block;
-    background-color: rgb(61, 150, 201);
+    background-color: var(--light-blue);
     justify-self: center;
     margin: auto;
     border-radius: 10px;
     height: 30px;
     font-weight: bold;
-    color: black;
-    text-shadow: 5px 5px 40px white;
-    border-color: white;
+    color: var(--black);
+    text-shadow: 5px 5px 40px var(--white);
+    border-color: var(--white);
 }
 
 .donateBar {
     justify-self: center;
     margin: auto;
-    background-color: rgb(61, 150, 201);
+    background-color: var(--light-blue);
     width: 80%;
     border-radius: 13px;
     padding: 2px;
@@ -197,7 +212,7 @@ h2 {
 
 table {
     display: block;
-    border: 2px solid white;
+    border: 2px solid var(--white);
     border-radius: 5px;
     border-collapse: collapse;
     width: 90%;
@@ -208,8 +223,8 @@ table {
 }
 
 th, td {
-    border: 1px solid white;
-    color: white;
+    border: 1px solid var(--white);
+    color: var(--white);
     word-wrap: break-word;
     padding: 8px;
 }
@@ -226,8 +241,8 @@ td:nth-child(2), th:nth-child(2) {
 
 td:nth-child(3) {
     font-style: italic;
-    color: rgb(61, 150, 201);
-    text-shadow: 0px 0px 1px white;
+    color: var(--light-blue);
+    text-shadow: 0px 0px 1px var(--white);
 }
 
 tr:nth-child(2n) {
@@ -251,18 +266,19 @@ tr:nth-child(2n) {
 }
 
 .gallery > img {
-    height: 100px;
+    flex-basis: 40%;
+    height: 300px;
     border-radius: 5px;
-    border: 1px solid white;
+    border: 1px solid var(--white);
     margin: auto;
     margin-bottom: 20px;
     transition: 0.4s ease;
 }
 
 .gallery > img:hover {
-    transform: scale(6.0);
+    transform: scale(2.0);
     box-shadow: 0px 0px 1000px 500px rgba(0, 0, 0, 0.753);
-    border: 1px solid black;
+    border: 1px solid var(--black);
     z-index: 100;
 }
 
@@ -278,15 +294,15 @@ tr:nth-child(2n) {
 }
 
 .contactForm > label {
-    color: white;
+    color: var(--white);
     margin-bottom: 5px;
     margin-left: 10px;
 }
 
 .contactForm > input {
     margin-bottom: 20px;
-    background-color: rgb(7, 67, 102);
-    color: white;
+    background-color: var(--darker-blue);
+    color: var(--white);
     border: none;
     border-radius: 5px;
     padding: 10px;
@@ -295,8 +311,8 @@ tr:nth-child(2n) {
 .contactForm > textarea {
     margin-bottom: 20px;
     height: 200px;
-    background-color: rgb(7, 67, 102);
-    color: white;
+    background-color: var(--darker-blue);
+    color: var(--white);
     border: none;
     border-radius: 5px;
     padding: 10px;
@@ -305,11 +321,11 @@ tr:nth-child(2n) {
 .contactForm > button {
     justify-self: center;
     margin: auto;
-    border: 2px solid white;
+    border: 2px solid var(--white);
     border-radius: 5px;
     padding: 10px;
-    background-color: rgb(7, 67, 102);
-    color: white;
+    background-color: var(--darker-blue);
+    color: var(--white);
 }
 
 .map {
@@ -333,8 +349,8 @@ footer {
     font-size: 15px;
     bottom: 0;
     left: 0;
-    color: white;
-    text-shadow: 5px 5px 20px black;
+    color: var(--white);
+    text-shadow: 5px 5px 20px var(--black);
     background-color: rgb(0,0,0,0.8);
 
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -385,7 +401,8 @@ footer {
         border-radius: 5px;
         justify-self: center;
         justify-content: center;
-        margin: 0 auto;
+        margin: auto;
+        margin-bottom: 4%;
     }
 
     nav > a {
@@ -394,19 +411,18 @@ footer {
     }
 
     main {
-        background-color: black;
+        background-color: var(--black);
         width: 90%;
         margin: auto;
         margin-top: 10px;
         margin-bottom: 50px;
         height: auto;
         border-radius: 10px;
-        border: 4px dashed rgba(255, 255, 255, 0.205);
         justify-self: center;
     }
 
     main > p {
-        color: white;
+        color: var(--white);
         margin-left: 5%;
         margin-right: 5%;
     }
@@ -417,14 +433,14 @@ footer {
         margin-left: 5%;
         padding-top: 20px;
         text-align: center;
-        color: white;
-        text-shadow: 10px 10px 10px black;
+        color: var(--white);
+        text-shadow: 10px 10px 10px var(--black);
         text-wrap: break-word;
         font-size: 30px;
     }
 
     main > h3 {
-        color: white;
+        color: var(--white);
         margin-left: 5%;
         margin-right: 5%;
     }
@@ -492,8 +508,8 @@ footer {
         font-size: 10px;
         bottom: 0;
         left: 0;
-        color: white;
-        text-shadow: 5px 5px 20px black;
+        color: var(--white);
+        text-shadow: 5px 5px 20px var(--black);
         align-items: center;
     }
 
