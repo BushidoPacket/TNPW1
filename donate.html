@@ -8,40 +8,6 @@
     <title>Otter Guard</title>
     <script src="support.js"></script>
 
-    <script>
-        window.onload = convert;
-      
-        function convert() {
-          fetch("donators.json")
-            .then((response) => response.json())
-            .then((jsonData) => {
-              let divOutput = document.getElementById("topDonatorsTable");
-              let table = document.createElement("table");
-              let headerNames = Object.keys(jsonData[0]);
-              let thead = document.createElement("thead");
-              let tr = document.createElement("tr");
-              headerNames.forEach((item) => {
-                let th = document.createElement("th");
-                th.innerText = item;
-                tr.appendChild(th);
-              });
-              thead.appendChild(tr);
-              table.append(tr);
-              jsonData.forEach((item) => {
-                let tr = document.createElement("tr");
-                let values = Object.values(item);
-                values.forEach((elem) => {
-                  let td = document.createElement("td");
-                  td.innerText = elem;
-                  tr.appendChild(td);
-                });
-                table.appendChild(tr);
-              });
-              divOutput.appendChild(table);
-            });
-        }
-      </script>
-
 </head>
 <body>
 

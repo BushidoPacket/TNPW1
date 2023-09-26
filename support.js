@@ -1,5 +1,13 @@
-window.addEventListener('load', activePage);
+//window.addEventListener('load', activePage);
 
+window.addEventListener('load', function() {
+    activePage();
+    if (window.location.pathname === '/donate.html') {
+      convert();
+    }
+});
+
+// Mark of active page in nav
 function activePage() {
     const currentLocation = location.pathname.slice(1); 
     //console.log(currentLocation); 
@@ -13,6 +21,7 @@ function activePage() {
     }
 }
 
+// Contact form and donate button dialog
 function buttonMessage(identifier) {
     let element;
     if(identifier == 1){
@@ -41,3 +50,34 @@ function buttonMessage(identifier) {
         element.innerHTML = "";
     }, 5000);
 }
+
+// Donate table creator from json file
+function convert() {
+    fetch("donators.json")
+      .then((response) => response.json())
+      .then((jsonData) => {
+        let divOutput = document.getElementById("topDonatorsTable");
+        let table = document.createElement("table");
+        let headerNames = Object.keys(jsonData[0]);
+        let thead = document.createElement("thead");
+        let tr = document.createElement("tr");
+        headerNames.forEach((item) => {
+          let th = document.createElement("th");
+          th.innerText = item;
+          tr.appendChild(th);
+        });
+        thead.appendChild(tr);
+        table.append(tr);
+        jsonData.forEach((item) => {
+          let tr = document.createElement("tr");
+          let values = Object.values(item);
+          values.forEach((elem) => {
+            let td = document.createElement("td");
+            td.innerText = elem;
+            tr.appendChild(td);
+          });
+          table.appendChild(tr);
+        });
+        divOutput.appendChild(table);
+      });
+  }
