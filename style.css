@@ -273,7 +273,7 @@ tr:nth-child(2n) {
     justify-content: space-evenly;
     width: 90%;
     /*border: red dashed 1px;*/
-    margin-bottom: 150px;
+    margin-bottom: 100px;
 }
 
 .gallery > img {
