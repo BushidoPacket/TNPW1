@@ -2,7 +2,8 @@
 
 window.addEventListener('load', function() {
     activePage();
-    if (window.location.pathname === '/donate.html') {
+    if (window.location.pathname === '/donate.html'
+    || window.location.pathname === 'TNPW1/donate.html') {
       convert();
     }
 });
