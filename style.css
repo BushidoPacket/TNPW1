@@ -14,7 +14,7 @@
 @import url('https://fonts.cdnfonts.com/css/palatino-lt-black');
 
 :root {
-    --last-update: "24.9.2023";
+    --last-update: "26.9.2023";
     --contact-info: "office@otterguard.com";
 
     /*colors*/
@@ -61,6 +61,7 @@ body {
 
 h1 {
     margin: auto;
+    margin-top: 15px;
     text-align: center;
     color: var(--white);
     text-shadow: 10px 10px 10px var(--black);
