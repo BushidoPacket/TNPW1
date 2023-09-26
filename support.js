@@ -1,12 +1,4 @@
-//window.addEventListener('load', activePage);
-
-window.addEventListener('load', function() {
-    activePage();
-    if (window.location.pathname === '/donate.html'
-    || window.location.pathname === 'TNPW1/donate.html') {
-      convert();
-    }
-});
+window.addEventListener('load', activePage);
 
 // Mark of active page in nav
 function activePage() {
