@@ -75,8 +75,9 @@ h1 {
     flex-direction: row;
     width: auto;
     height: auto;
-    padding-left: 160px;
+    /*padding-left: 160px;*/
     justify-self: center;
+    /*border: 2px dashed red;*/
 }
 
 nav {
@@ -85,7 +86,9 @@ nav {
     /*padding-left: 160px;*/
     display: flex;
     flex-direction: column;
-    margin-left: 20px;
+    position: fixed;
+    margin-left: 10%;
+    margin-right: auto;
     border-radius: 5px;
 }
 
@@ -122,9 +125,10 @@ main {
     background-color: var(--black);
     width: 62%;
     height: auto;
-    margin-left: 80px;
+    /*margin-left: 80px;*/
     border-radius: 10px;
     /*border: 4px dashed rgba(255, 255, 255, 0.205);*/
+    margin: auto;
     margin-bottom: 50px;
     justify-self: center;
     box-shadow: 0px 0px 50px var(--black), 0px 0px 25px var(--black);
@@ -156,6 +160,7 @@ main > img {
     display: block;
     height: 300px;
     width: auto;
+    max-width: 90%;
     border-radius: 5px;
     margin: 0 auto;
 }
@@ -375,7 +380,7 @@ footer {
     content: var(--contact-info);
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 900px) {
 
     html, body {
         overflow-x: hidden;
@@ -409,6 +414,7 @@ footer {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        position: relative;
         border-radius: 5px;
         justify-self: center;
         justify-content: center;
@@ -525,6 +531,50 @@ footer {
 
     footer > * {
         flex-basis: 100%;
+    }
+
+}
+
+@media screen and (min-width: 901px) and (max-width: 1699px) {
+    .mainDiv {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        height: auto;
+        justify-self: center;
+        padding-left: 0;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        position: relative;
+        border-radius: 5px;
+        justify-self: center;
+        justify-content: center;
+        margin: auto;
+        margin-bottom: 4%;
+    }
+
+    nav > a {
+        flex-basis: 40%;
+        margin: 1%;
+        text-align: center;
+        justify-self: center;
+        justify-content: center;
+    }
+
+    main {
+        background-color: var(--black);
+        width: 90%;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 50px;
+        height: auto;
+        border-radius: 10px;
+        justify-self: center;
     }
 
 }
